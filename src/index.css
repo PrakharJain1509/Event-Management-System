@@ -1,0 +1,334 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header Styles */
+.header {
+  background-color: #3498db;
+  padding: 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a,
+.nav-links button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  text-decoration: underline;
+}
+
+/* HomePage Styles */
+.home-page h1 {
+  margin-bottom: 2rem;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h2 {
+  margin-top: 0;
+}
+
+.view-details-btn {
+  composes: btn btn-primary;
+}
+
+/* EventDetailsPage Styles */
+.event-details-page {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-info {
+  margin-bottom: 2rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.booking-form label {
+  font-weight: bold;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form button {
+  composes: btn btn-primary;
+}
+
+/* Chatbot Styles */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-window {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbot-header {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h3 {
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 80%;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #3498db;
+  color: white;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chatbot-input input {
+  flex-grow: 1;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.chatbot-input input:focus {
+  outline: none;
+}
+
+.send-btn {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.chatbot-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chatbot-toggle:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Event Management Styles */
+.event-management {
+  margin-bottom: 2rem;
+}
+
+.event-management form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.event-management input,
+.event-management textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.event-management button {
+  composes: btn btn-secondary;
+}
+
+/* Place Request Page Styles */
+.place-request-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-form label {
+  font-weight: bold;
+}
+
+.event-form input,
+.event-form textarea,
+.event-form .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.event-form button {
+  composes: btn btn-primary;
+}
+
+/* Global Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+

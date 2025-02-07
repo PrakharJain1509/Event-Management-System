@@ -1,0 +1,46 @@
+.student-dashboard h1 {
+  margin-bottom: 2rem;
+}
+
+.event-requests h2 {
+  margin-bottom: 1rem;
+}
+
+.event-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.pending {
+  color: #f39c12;
+}
+
+.status.approved {
+  color: #2ecc71;
+}
+
+.status.rejected {
+  color: #e74c3c;
+}
+
+.place-request-btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.place-request-btn:hover {
+  background-color: #2980b9;
+}
+
